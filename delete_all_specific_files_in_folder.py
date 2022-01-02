@@ -21,7 +21,7 @@ arg_parser.add_argument("Path",
 arg_parser.add_argument("Filename",
                         metavar="filename",
                         type=str,
-                        help="the name of the File to be deleted")
+                        help="the name of the File to be deleted (with extension)")
 
 arg_parser.add_argument("-v",
                         "--version",
@@ -35,6 +35,10 @@ filename = args.Filename
 
 if not os.path.isdir(folderpath):
     print("The path specified does not exist!")
+    exit()
+
+if filename.count(".") == 0:
+    print("Give a proper filename with extension!")
     exit()
 
 ret = del_spec_file.del_spec_file(folderpath, filename)

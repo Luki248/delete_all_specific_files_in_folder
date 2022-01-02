@@ -40,5 +40,9 @@ if __name__ == "__main__":
 
     filename = input("Filename to delete (with extension): ")
 
+    if filename.count(".") == 0:
+        print("Give a filename with extension!")
+        exit()
+
     ret = del_spec_file(path, filename)
     print("Deleted " + str(ret) + " file(s)")
