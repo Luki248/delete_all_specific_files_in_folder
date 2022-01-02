@@ -38,4 +38,4 @@ if not os.path.isdir(folderpath):
     exit()
 
 ret = del_spec_file.del_spec_file(folderpath, filename)
-print("Deleted " + str(ret) + " folder(s)")
+print("Deleted " + str(ret) + " file(s)")
